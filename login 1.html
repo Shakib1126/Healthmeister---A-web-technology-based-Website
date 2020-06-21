@@ -1,0 +1,71 @@
+<html>
+<head>
+<link rel="icon" type="Images/png" href="gb_title_logo.png" />
+<title>Login form </title>
+	<link rel="stylesheet" type="text/css" href="stylelog.css">
+</head>
+<body>
+	<div class="loginbox">
+	<img src="hm.jpg" class="img11">
+		<h1> Login Here</h1>
+		<form method="POST" action="connect.php">
+			<p>Username</p>
+			<input type="text" name="" placeholder="Enter Username">
+			<p>Password</p>
+			<input type="password" name="" placeholder="Enter Password">
+			<a href="home.html"</a>
+			
+				<input type="button" value="Get Hospitalized" />
+			
+			<a href="#">Forgot Password</a><br>
+			<a href="#">Don't Have an Account</a><br>
+			
+		</form>
+		
+		
+		
+		
+    </div>
+
+<? php
+$username = filter_input(INPUT_POST, 'username');
+ $password = filter_input(INPUT_POST, 'password');
+ if (!empty($username)){
+if (!empty($password)){
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "healthmeister";
+
+// Create connection
+$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+if (mysqli_connect_error()){
+  die('Connect Error ('. mysqli_connect_errno() .') '
+    . mysqli_connect_error());
+}
+else{
+  $sql = "INSERT INTO account (username, password)
+  values ('$username','$password')";
+  if ($conn->query($sql)){
+    echo "New record is inserted sucessfully";
+  }
+  else{
+    echo "Error: ". $sql ."
+". $conn->error;
+  }
+  $conn->close();
+}
+}
+else{
+  echo "Password should not be empty";
+  die();
+}
+ }
+ else{
+  echo "Username should not be empty";
+  die();
+ }
+?>
+</body>
+</html>

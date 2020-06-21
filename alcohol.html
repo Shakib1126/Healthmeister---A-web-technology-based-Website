@@ -1,0 +1,353 @@
+<html>
+<head>
+<title>Alcohol Detector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='style1.css' rel='stylesheet'>
+<script src="fat.js"></script>
+<link rel="shortcut icon" href="hm.jpg" />
+
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<body>
+<h1 id="logo">logo here</h1>
+<!--<button class="button7">LOGIN</button>-->
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Hospitals</a></li>
+  <li><a href="#contact">Login</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body >
+<h1>What is Body Alcohol Concentration(BAC)?? </h1>
+
+<center>
+<p> Blood/Breath Alcohol Concentration (BAC) is the amount ofalcohol in the bloodstream or on one's breath. BAC is expressed asthe weight of ethanol, measured in grams, in 100 milliliters ofblood, or 210 liters of breath. BAC can be measured by breath, blood, or urine tests.
+
+Some states define legal intoxication for purposes of driving as having a BAC of 0.08 or greater, in most cases (please check your state for the specific BAC level of intoxication). But alcohol may affect driving skills at BACs of 0.05 or even lower.
+
+Driving skills, especially judgment, are impaired in most people long before they show signs of drunkenness. The public usually associates BAC with "drunk driving." But it's more accurate to refer to "alcohol-impaired" driving because you do not have to be "drunk" to be impaired in your ability to safely drive a car.</p>
+</center>
+
+<script LANGUAGE="JavaScript"> 
+							<!-- Hide from older browsers 
+ 							function computeIt(form) { 
+ 								var lbs = form.weight.value; 
+								var numLbs = new Number(lbs); 
+ 
+								var drinks = form.drinks.options[form.drinks.selectedIndex].value;
+								var numDrinks = new Number(drinks); 
+ 
+								var alco = numDrinks*.045; 
+								var alcohol = new Number(alco); 
+ 
+								var hours = form.time.value; 
+								var numHours = new Number(hours); 
+ 
+								var metabol = numHours*.012; 
+								var metabolism = new Number(metabol); 
+
+								if (form.gender.options[form.gender.selectedIndex].value == "male") { 
+									gendervalue = ".58"; 
+        				} else { 
+                	gendervalue = ".49"; 
+                }
+                 
+								if (form.weight.value == "null") { 
+									form.average.value = " ";
+									alert("Please select a weight")
+      					}  
+      
+      					if (form.drinks.options[form.drinks.selectedIndex].value == "null"){ 
+       						form.average.value = " ";
+									alert("Please select number of drinks")
+       					} 
+      
+								if (form.time.value == "null"){ 
+									form.average.value = " ";
+									alert("Please enter number of hours")
+       					}
+                   
+       					if (form.gender.options[form.gender.selectedIndex].value == "null"){ 
+       						form.average.value = " ";
+       						gendervalue = null;
+       						alert("Please enter gender")
+       					}
+
+								var numSex = new Number(gendervalue); 
+ 
+ 								var weight = numLbs/2.2046; 
+								var lbs = new Number(weight); 
+ 
+								var water = lbs*numSex; 
+								var bodywater = new Number(water); 
+ 
+								var millwater = bodywater*1000; 
+								var milliliters = new Number(millwater); 
+ 
+								var oz = 23.36/milliliters; 
+								var ounces = new Number(oz); 
+ 
+								var gram = ounces*.806; 
+								var grams = new Number(gram); 
+ 
+								var gramsmill = grams*100; 
+								var bac0 = new Number(gramsmill); 
+ 
+								var bac1 = bac0*alcohol; 
+								var bac2 = new Number(bac1); 
+ 
+								var bac3 = bac2-metabolism; 
+								if (bac3 < 0) { 
+        					var result = "0.000"; 
+								} 
+								var bac4 = bac3 + ""; 
+								var result = bac4.substring(0,5); 
+
+							<!-- code for various results -->
+							if (result >= 0.08){
+								form.average.value = result; 
+								document.getElementById('average').style.color = 'red'
+							}
+	
+							else { form.average.value = result;  
+								document.getElementById('average').style.color = 'black'
+							}
+
+							if (result <= 0){
+								form.average.value = result;
+								document.getElementById('average').value = "Negligible amount"
+							}
+	 
+							if (result == "NaN"){
+								form.average.value = result;
+								document.getElementById('average').style.color = 'white'
+							}
+
+							if (result == "Infin"){
+								form.average.value = result;
+								document.getElementById('average').style.color = 'white'
+						}
+					}
+					-->
+					</script>
+<div class="alcohol">
+
+<center>Instructions:</b> Please select weight, drinks consumed, time period and gender and click the &quot;compute your BAC&quot; button:</p></center>
+						<div align="center">
+         			<table border="0" cellpadding="5" bgcolor="#000066" width="600">
+				<tr>
+				<td bgcolor="#FFFFFF" bordercolorlight="#0000FF" bordercolordark="#000000">
+				<div align="center">
+				<form>
+        			<table border="0" cellpadding="2" width="100%" cellspacing="1">
+          			<tr>
+            			<td>Weight:</td>
+				<td>
+			        <input type="text" name="weight" value="" size="4" />
+            			</td>
+            			<td>(pounds)</td>
+				</tr>
+          			<tr>
+            			<td>Drinks consumed:</td>
+				<td>
+        			<select NAME="drinks">
+        			<option value="null">Select One</option>
+          					<option value="12">1</option>
+          					<option value="24">2</option>
+          					<option value="36">3</option>
+          					<option value="48">4</option>
+          					<option value="60">5</option>
+          					<option value="72">6</option>
+          					<option value="84">7</option>
+          					<option value="96">8</option>
+          					<option value="108">9</option>
+          					<option value="120">10</option>
+          					<option value="132">11</option>
+          					<option value="144">12</option>
+          					<option value="156">13</option>
+          					<option value="168">14</option>
+          					<option value="180">15</option>
+          			</select>
+            			</td>
+            			<td>(12 oz. beer or equivalent)</td>
+          			</tr>
+          			<tr>
+            			<td>Over time period:</td>
+            			<td>
+				<input type="text" name="time" value="" size="4" />
+            			</td>
+            			<td>(hours)</td>
+				</tr>
+          			<tr>
+            			<td>Gender:</td>
+				<td colspan="2">
+        			<select NAME="gender">
+        			<option value="null">Select One</option>
+          			<option value="woman">Female</option>
+          			<option value="male">Male</option>
+        			</select>
+			        </td>
+				</tr>
+				<tr>
+				<td colspan="3">&nbsp;</td>
+				</tr>
+          			<tr>
+            			<td colspan="2"><h3>Your BAC will be:</h3></td>
+				<td><input type="text" size="16" name="average" value><br /><a href="#disclaimer">Disclaimer</a></td>
+				</tr>
+          			<tr>
+            			<td align="center" colspan="3"><br /><input type="button" name="compute" value="Compute" onClick="computeIt(form)">
+				<br>
+				<input type="reset" name="reset" value="Reset"></td>
+				</tr>
+				</form>
+        			</table>
+				</table>
+
+</div>
+</div>
+<hr>
+<style>
+.alcohol{
+background-color:f2f2f2;
+}
+
+.chart{
+font-size:15px;
+font-family:arial;}
+</style>
+<br>
+<div class="chart">
+<center>
+<h2>BAC Chart Values</h2></center>
+
+<ol class="bac">
+  <li> 0.00 – 0.03%	Normal behavior, no impairment</li>
+  <li>0.03 – 0.06%	Mild euphoria and impairment; decreased inhibitions.</li>
+  <li>0.06 – 0.10%	Buzzed, euphoric, increased impairment</li>
+  <li>0.10 – 0.20%	Drunk, emotional swings, slurred speech, nausea, loss of reaction time    and motor control.</li>
+  <li>0.20 – 0.30%	Confused, nauseated, poor mentation, blackout.</li>
+  <li>0.30 – 0.40%	Possibly unconscious, unarrousable, loss of bladder function, risk of death.</li>
+  <li>Above 0.40%	Unconscious, coma, impaired breathing, risk of death.</li>
+</ol>
+
+
+<br>
+<h2><center>Important Notes</center></h2>
+<ol class="bac">
+<li>If you’re typing in a custom percent alcohol, remember that the proof of an alcohol is double the percent (e.g. 80 proof alcohol is 40%).</li>
+<li>If you’re entering a mixed drink, only count the number of shots you put in (not the drink’s total volume).</li>
+<li>Everyone is different — BAC calculators are merely an estimate. A breathalyzer or blood test is the only way to have an accurate measurement.</li>
+<li>This calculator assumes the legal limit for driving is 0.08% and 21 years old. Please note that the legal limit for driving may vary depending on state/country and your age.</li>
+<li>All calculations are based on the US Department of Transportation.</li>
+</ol>
+<br>
+<hr>
+<style>
+.bac{
+margin-right:auto;
+margin-left:auto;
+padding-left:30%;
+padding-right:20%;
+}
+</style>
+<h2> How ALCOHOL causes us a Hangover!!<h2>
+<video width="100%" height="500" controls>
+  <source src="movie3.mp4" type="video/mp4">
+  <source src="movie3.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+<br>
+<br>
+
+<center>
+<div class="logos">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+</center>
+<style>
+.logos{
+background-color: black;
+height: 200px;
+}
+
+.chart{background-color:c0c0c0;}
+
+
+.fa {
+  padding: 25px;
+  font-size: 20px;
+  width: 20px;
+ text-align:center;
+  text-decoration: none;
+  margin: 10px 8px;
+   border-radius: 50%;
+ 
+}
+
+.fa:hover {
+    opacity: 0.7;
+   transform: rotateY(360deg);
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+</style>
+
+<center>
+<div class="footer">
+<h3 class="craft">Healthmeiser, Crafted with Love in India</h3>
+<h4 class="rights">&copy 2018-2019.|All rights reserved</h4>
+</div>
+</center>
+<style>
+.footer{
+background-color:DodgerBlue;
+width:100%;
+height:30%;
+}
+
+.craft{
+padding:30px;
+}
+
+
+</style>
+
+</body>
+<html>
+
+

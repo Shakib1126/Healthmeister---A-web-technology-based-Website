@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>FAT CALCULATOR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='style1.css' rel='stylesheet'>
+<script src="fat.js"></script>
+<link rel="shortcut icon" href="hm.jpg" />
+
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<body>
+<h1 id="logo">logo here</h1>
+<!--<button class="button7">LOGIN</button>-->
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Hospitals</a></li>
+  <li><a href="#contact">Login</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body >
+<h1>What is Body Fat?? </h1>
+
+<center>
+<p> The scientific term for body fat is "adipose tissue." Adipose tissue serves a number of important functions. Its primary purpose is to store lipids from which the body creates energy. In addition, it secretes a number of important hormones, and provides the body with some cushioning as well as insulation.1
+
+Body fat includes essential body fat and storage body fat. Essential body fat is a base level of fat that is found in most parts of the body. It is necessary fat that maintains life and reproductive functions. The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women. The healthy range of body fat for men is typically defined as 8-19%, while the healthy range for women is 21-33%. While having excess body fat can have many detrimental effects on a person's health, insufficient body fat can have negative health effects of its own, and maintaining a body fat percentage below, or even at the essential body fat percentage range is a topic that should be discussed with a medical professional.
+
+Storage fat is fat that accumulates in adipose tissue, be it subcutaneous fat (deep under the dermis and wrapped around vital organs) or visceral fat (fat located inside the abdominal cavity, between organs), and references to body fat typically refer to this type of fat. While some storage fat is ideal, excess amounts of storage fat can have serious negative health implications.
+
+Excess body fat leads to the condition of being overweight and eventually to obesity given that insufficient measures are taken to curb increasing body fat. Note that being overweight does not necessarily indicate an excess of body fat. A person's body weight is comprised of multiple factors including (but not limited to) body fat, muscle, bone density, and water content. Thus, highly muscular people are often classified as overweight.
+
+The rate at which body fat accumulates is different from person to person and is dependent on many factors including genetic factors as well as behavioral factors such as lack of exercise and excessive food intake. Due to varying factors, it can be more difficult for certain people to reduce body fat stored in the abdominal region. However, managing diet and exercise has been shown to reduce stored fat. Note that both women and men store body fat differently and that this can change over time. After the age of 40 (or after menopause in some cases for women), reduced sexual hormones can lead to excess body fat around the stomach in men, or around the buttocks and thighs of women. </p>
+</center>
+
+<center>
+<div id=outer>
+<b>Fat Percentage Calculator</b>
+<div id=cover>
+<form name=fp>
+<table class=main>
+<col class=w60>
+<col class=w60>
+<tr>
+<td>Measuring System<td>
+<select id=msf onchange=msystem();>
+<option value=metric>Metric (Kgs, Cms)<option value=us>US (lbs, inches)</select><tr><td>Sex<td>
+<select id=sf>
+<option value=m>Male<option value=f>Female</select><tr>
+<td>Height <span id=thf>(Cms)</span>
+<td>
+<input id=hf><tr><td>Neck Girth<span id=tneck> (Cms)</span><td>
+<input id=neck><tr><td>Waist <span id=twaist>(Cms)</span>
+<td><input id=waist><tr>
+<td>Hips <span id=thips>(Cms)</span><td>
+<input id=hips>
+<tr>
+<td><button type=reset>Reset</button>
+<td><button type=button onclick='bfat();'>Submit</button><tr>
+<td>Your Body Fat<td>
+<input id=bf class=op>
+<tr>
+<td>Body Fat Category<td>
+<input id=nbf class=op><tr>
+<td colspan=2 class=ac>Calculations are as per US Navy Formula</table>
+</form>
+</div>
+</div>
+</center>
+
+
+
+<style>
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;}
+
+input:focus {
+    background-color: DodgerBlue;
+    border: 3px solid #555;}
+
+button[type=button] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;}
+
+button[type=reset] {
+    width: 55%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;}
+
+button[type=reset]:hover {
+    background-color: DodgerBlue;
+}
+
+button[type=button]:hover {
+    background-color: DodgerBlue;}
+
+#outer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+   border-style: outset;
+}
+</style>
+<br>
+
+<h3> Have a look of What Fat does to your body!!</h2>
+<br>
+<div class="vid">
+<center>
+<video width="100%" height="500" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</center>
+<br>
+
+<center>
+<div class="logos">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+</center>
+<style>
+.logos{
+background-color: black;
+height: 200px;
+}
+
+
+.fa {
+  padding: 25px;
+  font-size: 20px;
+  width: 20px;
+ text-align:center;
+  text-decoration: none;
+  margin: 10px 8px;
+   border-radius: 50%;
+ 
+}
+
+.fa:hover {
+    opacity: 0.7;
+   transform: rotateY(360deg);
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+</style>
+
+<center>
+<div class="footer">
+<h3 class="craft">Healthmeiser, Crafted with Love in India</h3>
+<h4 class="rights">&copy 2018-2019.|All rights reserved</h4>
+</div>
+</center>
+<style>
+.footer{
+background-color:DodgerBlue;
+width:100%;
+height:30%;
+}
+
+.craft{
+padding:30px;
+}
+.vid{ background-color:c0c0c0;}
+
+
+</style>
+</body>
+</html>
+
+
