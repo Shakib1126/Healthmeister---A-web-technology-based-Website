@@ -19,10 +19,13 @@ The basis of this project is to create a platform which can help people to know 
 Our system or website is built on HTML, CSS and JavaScript which is a client-side scripting language.  Our website will calculate various health related parameters like 
  
 •	BMI
+
 •	BMR
+
 •	FAT CALCULATOR
-•	OVULATION PERIOD
+
 •	WAIST TO HIP RATIO
+
 •	BODY ALCOHOL DETECTOR
 
 All these parameters will be calculated which will provide the patient with accurate information of his or her health status without buying any products.
